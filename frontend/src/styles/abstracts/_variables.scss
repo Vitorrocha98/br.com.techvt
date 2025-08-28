@@ -1,0 +1,35 @@
+
+//Container's maximum width
+$max-width: 1400px;
+
+//Screen sizes
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+//Mobile first
+$min-sm: "min-width: #{$sm}";
+$min-md: "min-width: #{$md}";
+$min-lg: "min-width: #{$lg}";
+$min-xl: "min-width: #{$xl}";
+$min-hd: "min-width: #{$xxl}";
+
+//Desktop first
+$max-xs: "max-width: #{$sm - 0.2px}";
+$max-sm: "max-width: #{$md - 0.2px}";
+$max-md: "max-width: #{$lg - 0.2px}";
+$max-lg: "max-width: #{$xl - 0.2px}";
+$max-xl: "max-width: #{$xxl - 0.2px}";
+
+//Fonts
+$primary-font: "Open Sans", sans-serif;
+
+// Header height
+$header-desktop: 8.125rem;
+$header-mobile: 3.5rem;
+
+// z-index
+$header-index: 2;
+$modal-index: 3;

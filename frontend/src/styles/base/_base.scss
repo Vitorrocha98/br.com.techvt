@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body,
+  input,
+  textarea,
+  button {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    background-color:#FCFCFC;
+  }
+  
+  #main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  a {
+    color: var(--marca-cor-da-marca-2);
+    text-decoration: none;
+    transition: color 0.2s, filter 0.2s;
+  
+    &:hover {
+      filter: brightness(0.8);
+    }
+  
+    &:empty {
+      display: none;
+    }
+  }
+  
+  .swiper-slide {
+    height: auto;
+  }
