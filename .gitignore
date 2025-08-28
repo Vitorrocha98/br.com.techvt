@@ -1,0 +1,6 @@
+# Front-end
+frontend/node_modules
+frontend/www
+frontend/dist
+frontend/node
+/frontend/reports

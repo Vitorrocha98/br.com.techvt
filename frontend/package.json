@@ -1,0 +1,29 @@
+{
+  "name": "br.com.techvt",
+  "version": "1.0.0",
+  "author": "vitorfrocha98@gmail.com",
+  "description": "Portal dedicado para a exibição de projetos pessoais.",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "7.22.14",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "node-static": "^0.7.11",
+    "sass": "^1.72.0",
+    "through2": "^4.0.2"
+  }
+}

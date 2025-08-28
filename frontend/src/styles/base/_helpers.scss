@@ -1,0 +1,45 @@
+/*
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+
+ .container {
+  width: 100%; /* 1 */
+  max-width: calc($max-width + 2.5rem); /* 1 */
+  margin-inline: auto; /* 2 */
+  padding-inline: 1.25rem; /* 3 */
+
+  &-content {
+    max-width: calc(1000px + 2.5rem);
+  }
+}
+  
+  .d-none {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    @media screen and ($min-xl) {
+      display: none;
+    }
+  }
+  
+  .desktop-only {
+    @media screen and ($max-lg) {
+      display: none;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+  
