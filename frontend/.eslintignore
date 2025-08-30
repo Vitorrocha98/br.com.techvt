@@ -1,0 +1,11 @@
+# Folders in frontend
+www
+node_modules
+templates
+vendor
+
+# Types of files
+*.md
+gulpfile.js
+*.d.ts
+*.json

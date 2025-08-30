@@ -1,0 +1,12 @@
+{
+  "File-include Snippet": {
+    "scope": "html",
+    "prefix": ["@@include"],
+    "body": [
+      "<!-- $1 -->",
+      "<!-- prettier-ignore -->",
+      "@@include('$2')"
+    ],
+    "description": "Snippet for file-include ignoring prettier"
+  }
+}
