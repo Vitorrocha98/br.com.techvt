@@ -1,0 +1,57 @@
+{
+	"extends": [
+		"stylelint-config-standard-scss"
+	],
+	"rules": {
+		"unit-allowed-list": [
+			"%",
+			"deg",
+			"px",
+			"rem",
+			"ms",
+			"s",
+			"em",
+			"vh",
+			"fr"
+		],
+		"selector-class-pattern": [
+			"^([a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+			{
+				"message": "Expected selector name to be kebab-case or BEM-like",
+				"resolveNestedSelectors": true
+			}
+		],
+		"scss/at-function-pattern": [
+			"^((__|_|-|--)?[a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+			{
+				"message": "Expected function name to be kebab-case or BEM-like"
+			}
+		],
+		"scss/at-mixin-pattern": [
+			"^((__|_|-|--)?[a-z][a-z0-9]*)((__|_|-|--)?[a-zA-Z0-9]+)*$",
+			{
+				"message": "Expected mixin name to be kebab-case, camelCase or BEM-like"
+			}
+		],
+		"scss/dollar-variable-pattern": [
+			"^((__|_|-|--)?[a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+			{
+				"message": "Expected variable to be kebab-case or BEM-like"
+			}
+		],
+		"scss/percent-placeholder-pattern": [
+			"^((__|_|-|--)?[a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+			{
+				"message": "Expected placeholder to be kebab-case or BEM-like"
+			}
+		],
+		"selector-id-pattern": [
+			"^((__|_|-|--)?[a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+			{
+				"message": "Expected placeholder to be kebab-case or BEM-like"
+			}
+		],
+		"scss/double-slash-comment-whitespace-inside": null,
+    "no-descending-specificity": null
+	}
+}

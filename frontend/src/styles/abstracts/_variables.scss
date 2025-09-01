@@ -1,3 +1,23 @@
+//Brand colors
+$brand-color-1: #008994;
+$background-main-light: #fefefe;
+$text-color-main-light: #3a3a3a;
+$background-main-dark: #3a3a3a;
+$text-color-main-dark: #fefefe;
+
+//Colors
+$black: #000;
+$white: #fff;
+
+:root {
+  --background-color-main: #{$background-main-light};
+  --text-color-main: #{$text-color-main-light};
+}
+
+:root.dark {
+  --background-color-main: #{$background-main-dark};
+  --text-color-main: #{$text-color-main-dark};
+}
 
 //Container's maximum width
 $max-width: 1400px;

@@ -7,12 +7,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp start"
+    "start": "gulp start",
+    "lint": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js, ts, html}": [
+      "prettier --list-different",
+      "eslint"
+    ],
+    "*.scss": [
+      "prettier --list-different",
+      "stylelint"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
     "@babel/preset-env": "7.22.14",
     "del": "^6.1.1",
+    "eslint": "^9.34.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -22,8 +34,12 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
+    "lint-staged": "^16.1.5",
     "node-static": "^0.7.11",
+    "prettier": "^3.6.2",
     "sass": "^1.72.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard-scss": "^15.0.1",
     "through2": "^4.0.2"
   }
 }
