@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--background-header);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  border-block-end: 1px solid $border-white-light;
+
+  &-container {
+    height: 100%;
+  }
+
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  .hamburger-menu {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &__checkbox {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    &__lines {
+      position: relative;
+    }
+
+    &__lines,
+    &__lines::before,
+    &__lines::after {
+      display: block;
+      width: 1.375rem;
+      height: 2px;
+      border-radius: 9999px;
+      background-color: $brand-color-1;
+      transition: 0.4s ease-in-out;
+    }
+
+    &__lines::before {
+      position: absolute;
+      content: "";
+      top: -0.5rem;
+      right: 0;
+    }
+
+    &__lines::after {
+      position: absolute;
+      content: "";
+      top: 0.5rem;
+    }
+
+    // Animações das linhas de hamburguer quando o menu está ativo
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines,
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines::before,
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines::after {
+      width: 1.5rem;
+      border-radius: 0;
+    }
+
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines {
+      transform: rotateZ(-45deg);
+    }
+
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines::before {
+      transform: rotateZ(90deg) translate(8px, 0);
+    }
+
+    &__checkbox:checked ~ .header-wrapper .hamburger-menu .hamburger-menu__lines::after {
+      transform: translate(0, -8px) rotateZ(0deg);
+    }
+
+    &__checkbox:checked ~ .menu {
+      height: 100vh;
+      visibility: visible;
+      grid-template-rows: 1fr;
+      overflow: scroll;
+    }
+  }
+
+  &-logo {
+    display: flex;
+  }
+}

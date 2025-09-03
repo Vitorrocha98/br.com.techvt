@@ -37,15 +37,11 @@ button {
 }
 
 a {
-  color: var(--marca-cor-da-marca-2);
+  color: var(--text-color-main);
   text-decoration: none;
   transition:
     color 0.2s,
     filter 0.2s;
-
-  &:hover {
-    filter: brightness(0.8);
-  }
 
   &:empty {
     display: none;
