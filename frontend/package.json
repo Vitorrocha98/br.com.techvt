@@ -6,9 +6,10 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp start",
-    "lint": "lint-staged"
+    "build-github-pages": "gulp build-github-pages",
+    "lint": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
     "*.{js, ts, html}": [
