@@ -26,6 +26,10 @@ body {
   background-color: var(--background-color-main);
 }
 
+body:has(#hamburger-menu:checked) {
+  overflow: hidden;
+}
+
 #main {
   flex: 1;
   display: flex;

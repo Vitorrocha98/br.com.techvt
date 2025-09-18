@@ -13,6 +13,17 @@
   box-shadow: $shadow-block-end;
   transition: height 0.4s ease-in-out;
 
+  @media screen and ($min-lg) {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    top: unset;
+    background-color: transparent;
+    box-shadow: unset;
+    order: 2;
+  }
+
   &-list {
     list-style: none;
     padding-inline-start: unset;
@@ -21,16 +32,36 @@
     flex-direction: column;
     gap: 10px;
 
-    &__item--link {
-      display: inline-block;
+    @media screen and ($min-lg) {
+      display: flex;
+      flex-direction: row;
+      padding-block: unset;
+      align-items: center;
       width: 100%;
-      padding: 10px 0;
-      font-size: 1.25rem;
-      color: var(--text-color-main);
+      justify-content: flex-end;
+      gap: 32px;
+    }
 
-      &:hover,
-      &:active {
-        color: $brand-color-1;
+    &__item {
+      @media screen and ($min-lg) {
+        position: relative;
+      }
+
+      &--link {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.25rem;
+        color: var(--text-color-main);
+
+        @media screen and ($min-lg) {
+          font-size: 1rem;
+        }
+
+        &:hover,
+        &:active {
+          color: $brand-color-1;
+        }
       }
     }
   }
