@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<title>Página inicial</title>
+
+<!-- Generics favicons -->
+<link rel="icon" href="assets/images/favicon/favicon-32.png" sizes="32x32" />
+<link rel="icon" href="assets/images/favicon/favicon-192.png" sizes="192x192" />
+<!-- // Generics favicons -->
+
+<!-- Android favicons -->
+<link rel="shortcut icon" sizes="192x192" href="assets/images/favicon/favicon-192.png" />
+<!-- // Android favicons -->
+
+<!-- iOS favicons -->
+<link rel="apple-touch-icon" href="assets/images/favicon/favicon-180.png" sizes="180x180" />
+<meta name="msapplication-TileImage" content="assets/images/favicon/favicon-270.png" />
+<meta name="theme-color" content="#1463FF" />
+<!-- // iOS favicons -->
+
+<!-- Snippet Set Theme Portal -->
+<script>
+  (function () {
+    try {
+      var localTheme = localStorage.getItem("favoriteTheme");
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- preloaders -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" href="css/main.css" as="style" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- FONT -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+<!--// CSS -->
+
+<!-- DEFERRED SCRIPTS -->
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/micromodal@0.6.1/dist/micromodal.min.js"
+  integrity="sha256-KIs84SmO2qdNOOq0UCQAw/eKcX1uKXrlkzBfvI8tnX0="
+  crossorigin="anonymous"
+></script>
+<script defer src="vendor/pristine.min.js"></script>
+<script defer src="scripts/main.js"></script>
+<!-- // DEFERRED SCRIPTS -->
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+  <div class="header-container container">
+    <input type="checkbox" id="hamburger-menu" class="hamburger-menu__checkbox" />
+    <div class="header-wrapper">
+      <a href="/" class="header-logo" aria-label="TechVT — página inicial">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="assets/images/logotipo-techvt-desktop.png"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="assets/images/logotipo-techvt-mobile.png"
+            type="image/webp"
+          />
+
+          <img
+            src="assets/images/logotipo-techvt-desktop.png"
+            alt="TechVT"
+            fetchpriority="high"
+            decoding="async"
+            style="width: 116px"
+          />
+        </picture>
+      </a>
+      <div class="header-wrapper__actions">
+        <div class="header-theme-portal">
+          <button class="header-theme-portal__button" type="button"></button>
+          <div class="header-theme-portal__dropdown">
+            <span class="header-theme-portal__label">Tema</span>
+            <ul class="header-theme-portal__list">
+              <li class="header-theme-portal__list--item">
+                <button class="header-theme-portal__list--item__button-option light">Claro</button>
+              </li>
+              <li class="header-theme-portal__list--item">
+                <button class="header-theme-portal__list--item__button-option dark">Escuro</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <label class="hamburger-menu" for="hamburger-menu">
+          <span class="hamburger-menu__lines"></span>
+        </label>
+      </div>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Home</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Quem sou eu</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Projetos</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Experiência</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <!--// HEADER -->
+
+    <!-- CONTENT -->
+    <main>
+      <img src="assets/images/image.png" alt="" style="width: 100%" />
+      <img src="assets/images/image.png" alt="" style="width: 100%" />
+      <img src="assets/images/image.png" alt="" style="width: 100%" />
+    </main>
+    <!--// CONTENT -->
+
+    <!-- FOOTER -->
+    
+    <!--// FOOTER -->
+
+    <!-- SCRIPTS -->
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!--// SCRIPTS -->
+  </body>
+</html>
