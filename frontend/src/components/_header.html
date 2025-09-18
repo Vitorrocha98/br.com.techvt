@@ -1,43 +1,67 @@
 <header class="header">
-  <div class="header-container">
-    <a href="/" class="site-logo" aria-label="TechVT — página inicial">
-      <picture>
-        <source
-          media="(min-width: 768px)"
-          srcset="assets/images/logotipo-techvt-desktop.png"
-          type="image/webp"
-        />
-        <source
-          media="(max-width: 767px)"
-          srcset="assets/images/logotipo-techvt-mobile.png"
-          type="image/webp"
-        />
-
-        <img
-          src="/assets/logo-desktop.png"
-          alt="TechVT"
-          width="180"
-          height="40"
-          fetchpriority="high"
-          decoding="async"
-        />
-      </picture>
-    </a>
+  <div class="header-container container">
+    <input type="checkbox" id="hamburger-menu" class="hamburger-menu__checkbox" />
     <div class="header-wrapper">
+      <a href="/" class="header-logo" aria-label="TechVT — página inicial">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="assets/images/logotipo-techvt-desktop.png"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="assets/images/logotipo-techvt-mobile.png"
+            type="image/webp"
+          />
+
+          <img
+            src="assets/images/logotipo-techvt-desktop.png"
+            alt="TechVT"
+            fetchpriority="high"
+            decoding="async"
+            style="width: 116px"
+          />
+        </picture>
+      </a>
+      <div class="header-wrapper__actions">
+        <div class="header-theme-portal">
+          <button class="header-theme-portal__button" type="button"></button>
+          <div class="header-theme-portal__dropdown">
+            <span class="header-theme-portal__label">Tema</span>
+            <ul class="header-theme-portal__list">
+              <li class="header-theme-portal__list--item">
+                <button class="header-theme-portal__list--item__button-option light">Claro</button>
+              </li>
+              <li class="header-theme-portal__list--item">
+                <button class="header-theme-portal__list--item__button-option dark">Escuro</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <label class="hamburger-menu" for="hamburger-menu">
+          <span class="hamburger-menu__lines"></span>
+        </label>
+      </div>
       <nav class="menu">
         <ul class="menu-list">
           <li class="menu-list__item">
-            <a href="" class="menu-list__item--link">aaa</a>
+            <a href="#" class="menu-list__item--link">Home</a>
           </li>
           <li class="menu-list__item">
-            <a href="" class="menu-list__item--link">bbb</a>
+            <a href="#" class="menu-list__item--link">Quem sou eu</a>
           </li>
           <li class="menu-list__item">
-            <a href="" class="menu-list__item--link">ccc</a>
+            <a href="#" class="menu-list__item--link">Projetos</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Experiência</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__item--link">Contato</a>
           </li>
         </ul>
       </nav>
-      <div class="header-theme-portal"></div>
     </div>
   </div>
 </header>
