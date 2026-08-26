@@ -14,43 +14,13 @@
               <i data-lucide="check"></i> @@microcopy</span>
           </div>
         </div>
-        <div class="terminal reveal" aria-label="Representação de um repositório Front-end">
-          <div class="repo-window">
-            <div class="window-top">
-              <i class="dot"></i>
-              <i class="dot"></i>
-              <i class="dot"></i>
-              <span class="window-title">techvt://projetos/portal-web</span>
+        <div class="terminal reveal" aria-label="Repositórios Front-end em destaque">
+          <div class="repo-carousel swiper">
+            <div class="swiper-wrapper">
+              @@include("./_repository-slide.html", {"repositoryPath": "techvt://repositorio/projeto-01", "repositoryTitle": "techvt / projeto-01", "repositoryHref": "https://github.com/techvt/projeto-01"})
+              @@include("./_repository-slide.html", {"repositoryPath": "techvt://repositorio/projeto-02", "repositoryTitle": "techvt / projeto-02", "repositoryHref": "https://github.com/techvt/projeto-02"})
+              @@include("./_repository-slide.html", {"repositoryPath": "techvt://repositorio/projeto-03", "repositoryTitle": "techvt / projeto-03", "repositoryHref": "https://github.com/techvt/projeto-03"})
             </div>
-            <div class="repo-head">
-              <div>
-                <span class="kicker">REPOSITÓRIO EM EVOLUÇÃO</span>
-                <h3>techvt / frontend-lab</h3>
-              </div>
-              <span class="status">● ativo</span>
-            </div>
-            <div class="file">
-              <i data-lucide="folder"></i>
-              <span>components</span>
-              <time>interface</time>
-            </div>
-            <div class="file">
-              <i data-lucide="folder"></i>
-              <span>pages</span>
-              <time>estrutura</time>
-            </div>
-            <div class="file">
-              <i data-lucide="file-code-2"></i>
-              <span>scripts.js</span>
-              <time>JavaScript</time>
-            </div>
-            <div class="file">
-              <i data-lucide="palette"></i>
-              <span>styles.css</span>
-              <time>experiência</time>
-            </div>
-            <div class="commit">
-              <b>TechVT</b> criando, testando e aprendendo a cada versão</div>
           </div>
           <div class="float-card">
             <span>Front-end com propósito</span>

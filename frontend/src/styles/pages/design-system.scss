@@ -321,30 +321,37 @@ h1{
 /* Repository preview */
 .terminal{
   position:relative;
+  width:100%;
+  min-width:0;
   perspective:900px
 }
 .repo-carousel{
   width:100%;
-  overflow:visible;
+  max-width:100%;
+  min-width:0;
+  overflow:hidden;
   padding:6px 4px 18px
 }
 .repo-carousel .swiper-wrapper{
+  width:100%;
   align-items:stretch
 }
 .repo-window{
-  background:linear-gradient(155deg,rgba(11,24,48,.94),rgba(3,7,18,.97));
+  background:linear-gradient(155deg, rgb(11 24 48), rgba(3, 7, 18, 0.97));
   border:1px solid rgba(255,255,255,.13);
   border-radius:16px;
   box-shadow:0 40px 90px #000,0 0 80px rgba(59,130,246,.15);
+  width:100%;
+  min-width:0;
   overflow:hidden;
   height:auto
 }
-.repo-head h3 a{
+.repo-head h3{
   display:inline-flex;
   align-items:center;
   gap:8px
 }
-.repo-head h3 a i{
+.repo-head h3 i{
   width:16px;
   height:16px;
   color:var(--primary)
@@ -375,7 +382,20 @@ h1{
   padding:25px;
   display:flex;
   justify-content:space-between;
-  border-bottom:1px solid var(--line)
+  border-bottom:1px solid var(--line);
+  color:inherit;
+  text-decoration:none;
+  transition:.25s
+}
+
+.repo-head > div {
+  display:flex;
+  flex-direction:column;
+}
+.repo-head:hover{
+  background:rgba(59,130,246,.09);
+  color:#fff;
+  padding-left:29px
 }
 .repo-head h3{
   margin:6px 0 0;
@@ -401,13 +421,7 @@ h1{
   padding:15px 24px;
   border-bottom:1px solid rgba(255,255,255,.045);
   font-size:13px;
-  color:#aaa;
-  transition:.25s
-}
-.file:hover{
-  background:rgba(59,130,246,.09);
-  color:#fff;
-  padding-left:29px
+  color:#aaa
 }
 .file i{
   color:#777
@@ -428,6 +442,7 @@ h1{
 }
 .float-card{
   position:absolute;
+  z-index:10;
   right:-28px;
   bottom:-54px;
   width:245px;
