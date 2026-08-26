@@ -1,0 +1,35 @@
+<section class="contact-section" id="@@sectionId">
+  <div class="wrap contact-layout">
+    <div class="contact-copy reveal">
+      <div class="eyebrow">@@eyebrow</div>
+      <h2>@@title</h2>
+      <p>@@description</p>
+      <a class="project-link" href="@@linkHref">@@linkLabel <i data-lucide="arrow-up-right"></i></a>
+    </div>
+    <form class="form-shell reveal" id="contact-form" novalidate>
+      <h2>@@formTitle</h2>
+      <p class="form-note">@@formNote</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="nome">@@nameLabel</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-nome" />
+          <span class="error" id="erro-nome"></span>
+        </div>
+        <div class="field">
+          <label for="email">@@emailLabel</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="erro-email" />
+          <span class="error" id="erro-email"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="mensagem">@@messageLabel</label>
+        <textarea id="mensagem" name="mensagem" required minlength="10" aria-describedby="erro-mensagem"></textarea>
+        <span class="error" id="erro-mensagem"></span>
+      </div>
+      <div class="form-bottom">
+        <button class="pill primary" type="submit">@@submitLabel <i data-lucide="send"></i></button>
+        <span class="form-status" id="form-status" role="status" aria-live="polite">@@statusText</span>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    @@include("./components/_head.html", {"title": "Sobre — TechVT", "description": "Conheça a trajetória Front-end de Vitor Rocha e a TechVT."})
+  </head>
+  <body>
+    @@include("./components/_background-effects.html")
+    @@include("./components/_header.html", {"homeHref": "index.html", "projectsHref": "projetos.html", "technologiesHref": "tecnologias.html", "aboutHref": "sobre.html", "contactHref": "contato.html", "ctaHref": "contato.html", "ctaLabel": "Vamos conversar"})
+    <main>
+      @@include("./components/_detail-hero.html", {"homeHref": "index.html", "homeLabel": "Início", "breadcrumb": "Sobre", "eyebrow": "Vitor Rocha • Front-end", "title": "Curiosidade vira", "highlight": "experiência.", "lead": "A TechVT é onde organizo o que construo e o que aprendo. Um lugar para observar a evolução do código, das interfaces e da minha forma de pensar a web."})
+      @@include("./components/_about-detail.html", {"eyebrow": "Minha perspectiva", "title": "Uma web mais clara começa nos detalhes.", "description": "Trabalho com Front-end porque gosto do ponto em que", "emphasis": "lógica, visual e pessoas se encontram.", "details": "Tenho interesse especial por portais: ambientes em que conteúdo, navegação e interface precisam conversar com naturalidade. JavaScript é minha principal ferramenta para transformar estruturas em experiências vivas, sempre com atenção ao que é útil, compreensível e agradável.", "linkHref": "projetos.html", "linkLabel": "Conhecer os projetos"})
+    </main>
+    @@include("./components/_footer.html", {"homeHref": "index.html"})
+  </body>
+</html>

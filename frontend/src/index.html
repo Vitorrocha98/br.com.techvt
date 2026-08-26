@@ -1,27 +1,22 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    @@include("./components/_head.html", {"title": "Página inicial"})
+    @@include("./components/_head.html", {"title": "TechVT — Front-end por Vitor Rocha", "description": "TechVT — projetos, estudos e experiências Front-end de Vitor Rocha."})
   </head>
   <body>
-    <!-- HEADER -->
-    @@include('./components/_header.html')
-    <!--// HEADER -->
-
-    <!-- CONTENT -->
-    <main>
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    @@include("./components/_background-effects.html")
+    <!-- header -->
+    @@include("./components/_header.html", {"homeHref": "#inicio", "projectsHref": "#projetos", "technologiesHref": "#tecnologias", "aboutHref": "#sobre", "contactHref": "#contato", "ctaHref": "#projetos", "ctaLabel": "Explorar projetos"})
+    <main id="conteudo">
+      @@include("./components/_home-hero.html", {"eyebrow": "Olá, eu sou Vitor Rocha", "title": "Ideias ganham", "highlight": "interface.", "lead": "Sou desenvolvedor Front-end com foco em JavaScript, portais e aplicações web. Na TechVT, reúno projetos, estudos e experimentos feitos com cuidado — do primeiro componente à experiência completa.", "primaryHref": "#projetos", "primaryLabel": "Conheça meus projetos", "secondaryHref": "#contato", "secondaryLabel": "Vamos conversar", "microcopy": "Um repositório vivo de código, ideias e evolução."})
+      @@include("./components/_projects-section.html", {"eyebrow": "Projetos em destaque", "title": "Um pouco do que venho construindo.", "description": "Projetos, estudos e experimentos de Front-end. Cada entrega representa uma etapa do meu processo de aprendizado e criação.", "linkHref": "projetos.html", "linkLabel": "Ver todos os projetos"})
+      @@include("./components/_technologies-section.html", {"eyebrow": "Tecnologias e práticas", "title": "Ferramentas para criar experiências que fazem sentido.", "description": "Mais do que uma lista, estes são os fundamentos que orientam meu trabalho no Front-end.", "linkHref": "tecnologias.html", "linkLabel": "Conhecer minha abordagem"})
+      @@include("./components/_about-section.html", {"eyebrow": "Sobre mim", "title": "Código próximo de pessoas.", "description": "Gosto de transformar ideias em", "emphasis": "interfaces funcionais, organizadas e agradáveis de usar.", "details": "Meu trabalho é voltado ao desenvolvimento Front-end, principalmente com JavaScript e tecnologias que fazem parte da construção de portais modernos. A TechVT é o espaço onde compartilho projetos, estudos e aprendizados — sempre buscando tornar a web um pouco mais clara, acessível e interessante.", "linkHref": "sobre.html", "linkLabel": "Conhecer minha trajetória"})
+      @@include("./components/_contact-section.html", {"sectionId": "contato", "eyebrow": "Vamos conversar", "title": "Uma boa ideia merece um bom começo.", "description": "Se quiser trocar uma ideia sobre Front-end, portais ou uma possível colaboração, valide sua mensagem por aqui. Enquanto o canal definitivo não está conectado, nada será enviado.", "linkHref": "contato.html", "linkLabel": "Ver página de contato", "formTitle": "Conte um pouco sobre sua ideia", "formNote": "Demonstração local: os dados são apenas validados no navegador e não são enviados nem armazenados.", "nameLabel": "Seu nome", "emailLabel": "Seu e-mail", "messageLabel": "Sua mensagem", "submitLabel": "Validar mensagem", "statusText": "Preencha os campos para testar o formulário."})
     </main>
-    <!--// CONTENT -->
-
-    <!-- FOOTER -->
-    @@include('./components/_footer.html')
-    <!--// FOOTER -->
-
-    <!-- SCRIPTS -->
-    @@include("./components/_scripts.html")
-    <!--// SCRIPTS -->
+    <!-- footer -->
+    @@include("./components/_footer.html", {"homeHref": "#inicio"})
+    <!-- Inicialização dos ícones, menu móvel, animações e validação do formulário -->
   </body>
 </html>

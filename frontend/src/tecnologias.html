@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    @@include("./components/_head.html", {"title": "Tecnologias — TechVT", "description": "Tecnologias e práticas usadas nos projetos Front-end da TechVT."})
+  </head>
+  <body>
+    @@include("./components/_background-effects.html")
+    @@include("./components/_header.html", {"homeHref": "index.html", "projectsHref": "projetos.html", "technologiesHref": "tecnologias.html", "aboutHref": "sobre.html", "contactHref": "contato.html", "ctaHref": "projetos.html", "ctaLabel": "Ver projetos"})
+    <main>
+      @@include("./components/_detail-hero.html", {"homeHref": "index.html", "homeLabel": "Início", "breadcrumb": "Tecnologias", "eyebrow": "Ferramentas e fundamentos", "title": "Tecnologia com", "highlight": "intenção.", "lead": "Escolho ferramentas a partir do problema, não pelo ruído do momento. JavaScript é o centro; clareza, acessibilidade e responsividade orientam o restante."})
+      @@include("./components/_technologies-detail.html", {"stepOneTitle": "HTML semântico", "stepOneDescription": "Estrutura que comunica sentido e funciona como fundação da experiência.", "stepTwoTitle": "CSS responsivo", "stepTwoDescription": "Layouts fluidos, tokens consistentes e detalhes que se adaptam ao contexto.", "stepThreeTitle": "JavaScript", "stepThreeDescription": "Comportamentos úteis, estados previsíveis e interfaces que respondem com clareza.", "stepFourTitle": "Acessibilidade", "stepFourDescription": "Teclado, foco, contraste, semântica e movimento tratados desde o início."})
+    </main>
+    @@include("./components/_footer.html", {"homeHref": "index.html"})
+  </body>
+</html>
