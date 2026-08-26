@@ -17,6 +17,24 @@ function initializeRepositoryCarousel() {
 
   if (!carousel || !window.Swiper) return;
 
+  const slides = carousel.querySelectorAll(".swiper-wrapper > .swiper-slide");
+
+  slides.forEach((slide, activeIndex) => {
+    const dotsContainer = slide.querySelector(".window-dots");
+
+    if (!dotsContainer) return;
+
+    const dots = document.createDocumentFragment();
+
+    slides.forEach((_, dotIndex) => {
+      const dot = document.createElement("i");
+      dot.className = `dot${dotIndex === activeIndex ? " is-active" : ""}`;
+      dots.appendChild(dot);
+    });
+
+    dotsContainer.replaceChildren(dots);
+  });
+
   new window.Swiper(carousel, {
     effect: "cards",
     grabCursor: true,

@@ -364,13 +364,19 @@ h1{
   padding:0 18px;
   gap:7px
 }
+.window-dots{
+  display:flex;
+  align-items:center;
+  gap:7px
+}
 .dot{
+  display:block;
   width:7px;
   height:7px;
   border-radius:50%;
   background:#3d3d3d
 }
-.dot:first-child{
+.dot.is-active{
   background:var(--primary)
 }
 .window-title{
