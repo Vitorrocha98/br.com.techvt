@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    @@include("./components/_head.html", {"title": "Projetos — TechVT", "description": "Projetos e experimentos Front-end da TechVT."})
+  </head>
+  <body>
+    @@include("./components/_background-effects.html")
+    @@include("./components/_header.html", {"homeHref": "index.html", "projectsHref": "projetos.html", "technologiesHref": "tecnologias.html", "aboutHref": "sobre.html", "contactHref": "contato.html", "ctaHref": "contato.html", "ctaLabel": "Vamos conversar"})
+    <main>
+      @@include("./components/_detail-hero.html", {"homeHref": "index.html", "homeLabel": "Início", "breadcrumb": "Projetos", "eyebrow": "Repositório TechVT", "title": "Projetos são ideias", "highlight": "em movimento.", "lead": "Aqui organizo projetos, estudos e experimentos de Front-end. Mais do que resultados finais, gosto de mostrar o caminho: decisões, hipóteses e aprendizados."})
+      @@include("./components/_projects-detail.html", {"featuredTitle": "Portais que organizam informação", "featuredDescription": "Projetos voltados a estruturas de conteúdo, navegação clara e experiências que ajudam pessoas a encontrar o que procuram. Este espaço está preparado para receber estudos de caso reais.", "cardOneTitle": "Componentes de interface", "cardOneDescription": "Explorações de padrões reutilizáveis, estados interativos e consistência visual.", "cardTwoTitle": "Laboratório JavaScript", "cardTwoDescription": "Pequenos testes de comportamento, Web APIs e soluções para desafios recorrentes.", "cardThreeTitle": "Experiência inclusiva", "cardThreeDescription": "Estudos sobre navegação por teclado, semântica, contraste e movimento responsável.", "cardFourTitle": "Próximas versões", "cardFourDescription": "Uma área viva, pronta para crescer conforme novos projetos forem publicados."})
+    </main>
+    @@include("./components/_footer.html", {"homeHref": "index.html"})
+  </body>
+</html>

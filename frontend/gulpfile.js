@@ -35,18 +35,22 @@ function clean(buildPath) {
   if (buildPath.build === path.resolve(__dirname, '../')) {
     return del([
       path.join(buildPath.build, 'index.html'),
+      path.join(buildPath.build, 'projetos.html'),
+      path.join(buildPath.build, 'tecnologias.html'),
+      path.join(buildPath.build, 'sobre.html'),
+      path.join(buildPath.build, 'contato.html'),
       path.join(buildPath.build, 'css/**/*'),
       path.join(buildPath.build, 'scripts/**/*'),
       path.join(buildPath.build, 'assets/**/*'),
       path.join(buildPath.build, 'vendor/**/*')
-    ])
+    ], { force: true })
   }
   return del(`${buildPath.build}/**/*`)
 }
 
 function favicon(buildPath) {
-  return gulp.src(`${buildPath.src}/assets/favicon/**/*`)
-    .pipe(gulp.dest(`${buildPath.build}/assets/favicon`))
+  return gulp.src(`${buildPath.src}/assets/images/favicon/**/*`)
+    .pipe(gulp.dest(`${buildPath.build}/assets/images/favicon`))
 }
 
 function html(buildPath, injectLivereload = false) {
@@ -97,21 +101,34 @@ function fonts(buildPath) {
 function watch(buildPath) {
   livereload.listen({ basePath: buildPath.build, quiet: false })
 
-  gulp.watch(`${buildPath.src}/assets/favicon/**/*`, () => favicon(buildPath))
-  gulp.watch(`${buildPath.src}/**/*.html`, () => html(buildPath, true))
-  gulp.watch(`${buildPath.src}/assets/images/**/*`, () => images(buildPath))
-  gulp.watch(`${buildPath.src}/scripts/**/*.js`, () => javascript(buildPath))
-  gulp.watch(`${buildPath.src}/styles/**/*.scss`, () => styles(buildPath))
-  gulp.watch(`${buildPath.src}/vendor/**/*.js`, () => vendor(buildPath))
-  gulp.watch(`${buildPath.src}/assets/fonts/*`, () => fonts(buildPath))
+  const rebuildAndReload = task => gulp.series(
+    () => task(buildPath),
+    reloadBrowser
+  )
+
+  gulp.watch(`${buildPath.src}/assets/images/favicon/**/*`, rebuildAndReload(favicon))
+  gulp.watch(`${buildPath.src}/**/*.html`, rebuildAndReload(targetPaths => html(targetPaths, true)))
+  gulp.watch([
+    `${buildPath.src}/assets/images/**/*`,
+    `!${buildPath.src}/assets/images/favicon/**/*`
+  ], rebuildAndReload(images))
+  gulp.watch(`${buildPath.src}/scripts/**/*.js`, rebuildAndReload(javascript))
+  gulp.watch(`${buildPath.src}/styles/**/*.scss`, rebuildAndReload(styles))
+  gulp.watch(`${buildPath.src}/vendor/**/*.js`, rebuildAndReload(vendor))
+  gulp.watch(`${buildPath.src}/assets/fonts/*`, rebuildAndReload(fonts))
 }
 
 async function serve(buildPath) {
-  const project = new nodeStatic.Server(buildPath.build)
+  const project = new nodeStatic.Server(buildPath.build, { cache: 0 })
 
   http.createServer((req, res) => {
     project.serve(req, res)
   }).listen(3000)
+}
+
+function reloadBrowser(done) {
+  livereload.reload()
+  done()
 }
 
 // --------------------

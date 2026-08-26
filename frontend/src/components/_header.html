@@ -1,67 +1,29 @@
-<header class="header">
-  <div class="header-container container">
-    <input type="checkbox" id="hamburger-menu" class="hamburger-menu__checkbox" />
-    <div class="header-wrapper">
-      <a href="/" class="header-logo" aria-label="TechVT — página inicial">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="assets/images/logotipo-techvt-desktop.png"
-            type="image/webp"
-          />
-          <source
-            media="(max-width: 1199px)"
-            srcset="assets/images/logotipo-techvt-mobile.png"
-            type="image/webp"
-          />
-
-          <img
-            src="assets/images/logotipo-techvt-desktop.png"
-            alt="TechVT"
-            fetchpriority="high"
-            decoding="async"
-            style="width: 116px"
-          />
-        </picture>
-      </a>
-      <div class="header-wrapper__actions">
-        <div class="header-theme-portal">
-          <button class="header-theme-portal__button" type="button"></button>
-          <div class="header-theme-portal__dropdown">
-            <span class="header-theme-portal__label">Tema</span>
-            <ul class="header-theme-portal__list">
-              <li class="header-theme-portal__list--item">
-                <button class="header-theme-portal__list--item__button-option light">Claro</button>
-              </li>
-              <li class="header-theme-portal__list--item">
-                <button class="header-theme-portal__list--item__button-option dark">Escuro</button>
-              </li>
-            </ul>
-          </div>
+<header class="site-header" id="inicio">
+  <div class="wrap site-header__inner">
+    <nav aria-label="Navegação principal">
+    <a class="brand" href="@@homeHref" aria-label="TechVT — início">
+      <picture>
+        <source media="(min-width: 901px)" srcset="assets/images/logotipo-techvt-desktop.png" />
+        <img class="brand-logo" src="assets/images/logotipo-techvt-mobile.png" alt="TechVT" width="141" height="44" />
+      </picture>
+    </a>
+    <div class="links">
+      <a href="@@homeHref">Início</a><a href="@@projectsHref">Projetos</a><a href="@@technologiesHref">Tecnologias</a><a href="@@aboutHref">Sobre</a><a href="@@contactHref">Contato</a>
+    </div>
+    <div class="nav-actions">
+      <div class="theme-switcher">
+        <button class="theme-toggle" type="button" aria-label="Alterar para o tema claro" aria-expanded="false" aria-controls="theme-menu"><i data-lucide="sun" aria-hidden="true"></i></button>
+        <div class="theme-menu" id="theme-menu" aria-hidden="true">
+          <button type="button" data-theme="light"><i data-lucide="sun"></i> Claro</button>
+          <button type="button" data-theme="dark"><i data-lucide="moon"></i> Escuro</button>
         </div>
-        <label class="hamburger-menu" for="hamburger-menu">
-          <span class="hamburger-menu__lines"></span>
-        </label>
       </div>
-      <nav class="menu">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Home</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Quem sou eu</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Projetos</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Experiência</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <a class="pill primary" href="@@ctaHref">@@ctaLabel <i data-lucide="arrow-up-right"></i></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+    </nav>
+    <div class="mobile-menu" id="menu-mobile" aria-hidden="true">
+      <a href="@@homeHref">Início <i data-lucide="arrow-right"></i></a><a href="@@projectsHref">Projetos <i data-lucide="arrow-right"></i></a><a href="@@technologiesHref">Tecnologias <i data-lucide="arrow-right"></i></a><a href="@@aboutHref">Sobre <i data-lucide="arrow-right"></i></a><a href="@@contactHref">Contato <i data-lucide="message-circle"></i></a>
     </div>
   </div>
 </header>

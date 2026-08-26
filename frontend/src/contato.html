@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    @@include("./components/_head.html", {"title": "Contato — TechVT", "description": "Contato demonstrativo da TechVT."})
+  </head>
+  <body>
+    @@include("./components/_background-effects.html")
+    @@include("./components/_header.html", {"homeHref": "index.html", "projectsHref": "projetos.html", "technologiesHref": "tecnologias.html", "aboutHref": "sobre.html", "contactHref": "contato.html", "ctaHref": "projetos.html", "ctaLabel": "Ver projetos"})
+    <main>
+      @@include("./components/_detail-hero.html", {"homeHref": "index.html", "homeLabel": "Início", "breadcrumb": "Contato", "eyebrow": "Aberto a boas conversas", "title": "Vamos começar", "highlight": "com uma ideia.", "lead": "Este canal ainda é demonstrativo, mas a experiência já mostra como uma conversa pode começar de forma clara e cuidadosa."})
+      @@include("./components/_contact-section.html", {"sectionId": "contato-formulario", "eyebrow": "Contato", "title": "O que você gostaria de construir?", "description": "Compartilhe o contexto, a intenção e o desafio. Nenhum dado será enviado enquanto o formulário não estiver conectado a um serviço real.", "linkHref": "index.html", "linkLabel": "Voltar para o início", "formTitle": "Escreva sua mensagem", "formNote": "Validação local em JavaScript; sem envio ou armazenamento.", "nameLabel": "Seu nome", "emailLabel": "Seu e-mail", "messageLabel": "Sua mensagem", "submitLabel": "Validar mensagem", "statusText": "Preencha os campos para testar."})
+    </main>
+    @@include("./components/_footer.html", {"homeHref": "index.html"})
+  </body>
+</html>

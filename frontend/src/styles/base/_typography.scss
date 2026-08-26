@@ -49,7 +49,6 @@ h6 {
 }
 
 p,
-span,
 li {
   font-size: 1rem;
 
@@ -65,9 +64,7 @@ h4,
 h5,
 h6,
 p,
-span,
 li {
-  color: var(--text-color-main);
   line-height: 1;
   word-break: break-word;
 }

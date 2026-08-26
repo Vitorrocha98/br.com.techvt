@@ -1,157 +1,318 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<title>Página inicial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="TechVT — projetos, estudos e experiências Front-end de Vitor Rocha." />
+<meta name="theme-color" content="#030712" />
+<title>TechVT — Front-end por Vitor Rocha</title>
 
-<!-- Generics favicons -->
+<!-- Favicons preservados do layout anterior -->
 <link rel="icon" href="assets/images/favicon/favicon-32.png" sizes="32x32" />
 <link rel="icon" href="assets/images/favicon/favicon-192.png" sizes="192x192" />
-<!-- // Generics favicons -->
-
-<!-- Android favicons -->
-<link rel="shortcut icon" sizes="192x192" href="assets/images/favicon/favicon-192.png" />
-<!-- // Android favicons -->
-
-<!-- iOS favicons -->
+<link rel="shortcut icon" href="assets/images/favicon/favicon-192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="assets/images/favicon/favicon-180.png" sizes="180x180" />
-<meta name="msapplication-TileImage" content="assets/images/favicon/favicon-270.png" />
-<meta name="theme-color" content="#1463FF" />
-<!-- // iOS favicons -->
 
-<!-- Snippet Set Theme Portal -->
 <script>
   (function () {
     try {
-      var localTheme = localStorage.getItem("favoriteTheme");
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } catch (e) {}
+      var savedTheme = localStorage.getItem("favoriteTheme");
+      if (savedTheme === "light") document.documentElement.classList.add("light");
+    } catch (error) {}
   })();
 </script>
 
-<!-- preloaders -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
 <link rel="preload" href="css/main.css" as="style" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
-  rel="stylesheet"
-/>
-
-<!-- FONT -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
-  rel="stylesheet"
-/>
-
-<!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="css/main.css" />
-<!--// CSS -->
-
-<!-- DEFERRED SCRIPTS -->
-<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/micromodal@0.6.1/dist/micromodal.min.js"
-  integrity="sha256-KIs84SmO2qdNOOq0UCQAw/eKcX1uKXrlkzBfvI8tnX0="
-  crossorigin="anonymous"
-></script>
-<script defer src="vendor/pristine.min.js"></script>
+<script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 <script defer src="scripts/main.js"></script>
-<!-- // DEFERRED SCRIPTS -->
 
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="header">
-  <div class="header-container container">
-    <input type="checkbox" id="hamburger-menu" class="hamburger-menu__checkbox" />
-    <div class="header-wrapper">
-      <a href="/" class="header-logo" aria-label="TechVT — página inicial">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="assets/images/logotipo-techvt-desktop.png"
-            type="image/webp"
-          />
-          <source
-            media="(max-width: 1199px)"
-            srcset="assets/images/logotipo-techvt-mobile.png"
-            type="image/webp"
-          />
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="glow" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true">
+  <i class="beam"></i>
+  <i class="beam"></i>
+  <i class="beam"></i>
+</div>
 
-          <img
-            src="assets/images/logotipo-techvt-desktop.png"
-            alt="TechVT"
-            fetchpriority="high"
-            decoding="async"
-            style="width: 116px"
-          />
-        </picture>
-      </a>
-      <div class="header-wrapper__actions">
-        <div class="header-theme-portal">
-          <button class="header-theme-portal__button" type="button"></button>
-          <div class="header-theme-portal__dropdown">
-            <span class="header-theme-portal__label">Tema</span>
-            <ul class="header-theme-portal__list">
-              <li class="header-theme-portal__list--item">
-                <button class="header-theme-portal__list--item__button-option light">Claro</button>
-              </li>
-              <li class="header-theme-portal__list--item">
-                <button class="header-theme-portal__list--item__button-option dark">Escuro</button>
-              </li>
-            </ul>
-          </div>
+    <!-- header -->
+    <header class="site-header" id="inicio">
+  <div class="wrap site-header__inner">
+    <nav aria-label="Navegação principal">
+    <a class="brand" href="#inicio" aria-label="TechVT — início">
+      <picture>
+        <source media="(min-width: 901px)" srcset="assets/images/logotipo-techvt-desktop.png" />
+        <img class="brand-logo" src="assets/images/logotipo-techvt-mobile.png" alt="TechVT" width="141" height="44" />
+      </picture>
+    </a>
+    <div class="links">
+      <a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#tecnologias">Tecnologias</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </div>
+    <div class="nav-actions">
+      <div class="theme-switcher">
+        <button class="theme-toggle" type="button" aria-label="Alterar para o tema claro" aria-expanded="false" aria-controls="theme-menu"><i data-lucide="sun" aria-hidden="true"></i></button>
+        <div class="theme-menu" id="theme-menu" aria-hidden="true">
+          <button type="button" data-theme="light"><i data-lucide="sun"></i> Claro</button>
+          <button type="button" data-theme="dark"><i data-lucide="moon"></i> Escuro</button>
         </div>
-        <label class="hamburger-menu" for="hamburger-menu">
-          <span class="hamburger-menu__lines"></span>
-        </label>
       </div>
-      <nav class="menu">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Home</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Quem sou eu</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Projetos</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Experiência</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__item--link">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <a class="pill primary" href="#projetos">Explorar projetos <i data-lucide="arrow-up-right"></i></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+    </nav>
+    <div class="mobile-menu" id="menu-mobile" aria-hidden="true">
+      <a href="#inicio">Início <i data-lucide="arrow-right"></i></a><a href="#projetos">Projetos <i data-lucide="arrow-right"></i></a><a href="#tecnologias">Tecnologias <i data-lucide="arrow-right"></i></a><a href="#sobre">Sobre <i data-lucide="arrow-right"></i></a><a href="#contato">Contato <i data-lucide="message-circle"></i></a>
     </div>
   </div>
 </header>
 
-    <!--// HEADER -->
+    <main id="conteudo">
+      <div class="wrap hero">
+        <div>
+          <div class="eyebrow reveal">Olá, eu sou Vitor Rocha</div>
+          <h1 class="reveal">Ideias ganham<br>
+            <span class="fade">interface.</span>
+          </h1>
+          <p class="lead reveal">Sou desenvolvedor Front-end com foco em JavaScript, portais e aplicações web. Na TechVT, reúno projetos, estudos e experimentos feitos com cuidado — do primeiro componente à experiência completa.</p>
+          <div class="hero-cta reveal">
+            <a class="pill primary" href="#projetos">Conheça meus projetos <i data-lucide="arrow-right"></i>
+            </a>
+            <a class="pill" href="#contato">Vamos conversar <i data-lucide="message-circle"></i>
+            </a>
+            <span class="micro">
+              <i data-lucide="check"></i> Um repositório vivo de código, ideias e evolução.</span>
+          </div>
+        </div>
+        <div class="terminal reveal" aria-label="Representação de um repositório Front-end">
+          <div class="repo-window">
+            <div class="window-top">
+              <i class="dot"></i>
+              <i class="dot"></i>
+              <i class="dot"></i>
+              <span class="window-title">techvt://projetos/portal-web</span>
+            </div>
+            <div class="repo-head">
+              <div>
+                <span class="kicker">REPOSITÓRIO EM EVOLUÇÃO</span>
+                <h3>techvt / frontend-lab</h3>
+              </div>
+              <span class="status">● ativo</span>
+            </div>
+            <div class="file">
+              <i data-lucide="folder"></i>
+              <span>components</span>
+              <time>interface</time>
+            </div>
+            <div class="file">
+              <i data-lucide="folder"></i>
+              <span>pages</span>
+              <time>estrutura</time>
+            </div>
+            <div class="file">
+              <i data-lucide="file-code-2"></i>
+              <span>scripts.js</span>
+              <time>JavaScript</time>
+            </div>
+            <div class="file">
+              <i data-lucide="palette"></i>
+              <span>styles.css</span>
+              <time>experiência</time>
+            </div>
+            <div class="commit">
+              <b>TechVT</b> criando, testando e aprendendo a cada versão</div>
+          </div>
+          <div class="float-card">
+            <span>Front-end com propósito</span>
+            <strong>Interfaces claras.<br>Experiências humanas.</strong>
+            <span>JavaScript • Web • Portais</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- CONTENT -->
-    <main>
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
-      <img src="assets/images/image.png" alt="" style="width: 100%" />
+      <section id="projetos">
+        <div class="wrap section">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">Projetos em destaque</div>
+              <h2>Um pouco do que venho construindo.</h2>
+            </div>
+            <p class="section-note">Projetos, estudos e experimentos de Front-end. Cada entrega representa uma etapa do meu processo de aprendizado e criação.</p>
+          </div>
+          <div class="projects">
+            <article class="project featured reveal">
+              <div class="project-top">
+                <span class="tag">Portal web</span>
+                <span class="tag">Em preparação</span>
+              </div>
+              <div class="project-visual" aria-hidden="true">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+              </div>
+              <h3>Projeto em destaque</h3>
+              <p>Espaço reservado para apresentar um portal completo, seus desafios de interface e as decisões por trás da experiência.</p>
+              <div class="meta">
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <a class="project-link" href="projetos.html">Conhecer detalhes <i data-lucide="arrow-right"></i>
+              </a>
+            </article>
+            <article class="project reveal">
+              <div class="project-top">
+                <span class="tag">Interface</span>
+                <span class="tag">Estudo</span>
+              </div>
+              <div class="project-visual center" aria-hidden="true">
+                <i class="project-icon" data-lucide="panels-top-left" width="90" height="90" stroke-width=".7"></i>
+              </div>
+              <h3>Experimento de UI</h3>
+              <p>Área reservada para componentes, interações e explorações visuais aplicadas à web.</p>
+              <div class="meta">
+                <span>Responsivo</span>
+                <span>Componentes</span>
+              </div>
+              <a class="project-link" href="projetos.html">Ver proposta <i data-lucide="arrow-right"></i>
+              </a>
+            </article>
+            <article class="project reveal">
+              <div class="project-top">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Laboratório</span>
+              </div>
+              <div class="project-visual center" aria-hidden="true">
+                <i class="project-icon" data-lucide="braces" width="100" height="100" stroke-width=".7"></i>
+              </div>
+              <h3>Front-end Lab</h3>
+              <p>Pequenos estudos para testar comportamento, organização de código e experiência de uso.</p>
+              <div class="meta">
+                <span>JavaScript</span>
+                <span>Web APIs</span>
+              </div>
+              <a class="project-link" href="projetos.html">Explorar ideia <i data-lucide="arrow-right"></i>
+              </a>
+            </article>
+          </div>
+          <div class="section-more reveal">
+            <a class="pill" href="projetos.html">Ver todos os projetos <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tecnologias">
+        <div class="wrap section">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">Tecnologias e práticas</div>
+              <h2>Ferramentas para criar experiências que fazem sentido.</h2>
+            </div>
+            <p class="section-note">Mais do que uma lista, estes são os fundamentos que orientam meu trabalho no Front-end.</p>
+          </div>
+          <div class="tech-grid reveal">
+            <article class="tech feature">
+              <i data-lucide="braces"></i>
+              <strong>JavaScript</strong>
+              <small>A linguagem por trás das interações, comportamentos e experiências que desenvolvo.</small>
+            </article>
+            <article class="tech">
+              <i data-lucide="layout-template"></i>
+              <strong>Interfaces web</strong>
+              <small>Estruturas claras, componentes consistentes e conteúdo fácil de navegar.</small>
+            </article>
+            <article class="tech">
+              <i data-lucide="monitor-smartphone"></i>
+              <strong>Responsividade</strong>
+              <small>Experiências pensadas para funcionar bem em diferentes telas e contextos.</small>
+            </article>
+            <article class="tech">
+              <i data-lucide="scan-eye"></i>
+              <strong>Usabilidade</strong>
+              <small>Atenção à acessibilidade, aos detalhes e à forma como cada pessoa usa a interface.</small>
+            </article>
+          </div>
+          <div class="section-more reveal">
+            <a class="pill" href="tecnologias.html">Conhecer minha abordagem <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <div class="wrap section about">
+          <div>
+            <div class="eyebrow reveal">Sobre mim</div>
+            <h2 class="reveal">Código próximo de pessoas.</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>Gosto de transformar ideias em <strong>interfaces funcionais, organizadas e agradáveis de usar.</strong>
+            </p>
+            <p class="small-copy">Meu trabalho é voltado ao desenvolvimento Front-end, principalmente com JavaScript e tecnologias que fazem parte da construção de portais modernos. A TechVT é o espaço onde compartilho projetos, estudos e aprendizados — sempre buscando tornar a web um pouco mais clara, acessível e interessante.</p>
+            <a class="pill" href="sobre.html">Conhecer minha trajetória <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato">
+  <div class="wrap contact-layout">
+    <div class="contact-copy reveal">
+      <div class="eyebrow">Vamos conversar</div>
+      <h2>Uma boa ideia merece um bom começo.</h2>
+      <p>Se quiser trocar uma ideia sobre Front-end, portais ou uma possível colaboração, valide sua mensagem por aqui. Enquanto o canal definitivo não está conectado, nada será enviado.</p>
+      <a class="project-link" href="contato.html">Ver página de contato <i data-lucide="arrow-up-right"></i></a>
+    </div>
+    <form class="form-shell reveal" id="contact-form" novalidate>
+      <h2>Conte um pouco sobre sua ideia</h2>
+      <p class="form-note">Demonstração local: os dados são apenas validados no navegador e não são enviados nem armazenados.</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-nome" />
+          <span class="error" id="erro-nome"></span>
+        </div>
+        <div class="field">
+          <label for="email">Seu e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="erro-email" />
+          <span class="error" id="erro-email"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" name="mensagem" required minlength="10" aria-describedby="erro-mensagem"></textarea>
+        <span class="error" id="erro-mensagem"></span>
+      </div>
+      <div class="form-bottom">
+        <button class="pill primary" type="submit">Validar mensagem <i data-lucide="send"></i></button>
+        <span class="form-status" id="form-status" role="status" aria-live="polite">Preencha os campos para testar o formulário.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
     </main>
-    <!--// CONTENT -->
+    <!-- footer -->
+    <footer class="footer">
+  <div class="wrap">
+    <div class="footer-simple">
+      <div><a class="brand" href="#inicio"><img class="brand-logo" src="assets/images/logotipo-techvt-desktop.png" alt="TechVT" width="312" height="97" /></a><p class="footer-intro">Projetos, estudos e ideias sobre Front-end, JavaScript e experiências web cuidadosas.</p></div>
+      <nav class="footer-links" aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="projetos.html">Projetos</a><a href="tecnologias.html">Tecnologias</a><a href="sobre.html">Sobre Vitor</a><a href="contato.html">Contato</a><a href="index.html#projetos">Destaques</a></nav>
+    </div>
+    <div class="footer-bottom"><span>© <span data-current-year></span> TechVT — Vitor Rocha.</span><span>Front-end, JavaScript e evolução contínua.</span></div>
+  </div>
+</footer>
 
-    <!-- FOOTER -->
-    
-    <!--// FOOTER -->
-
-    <!-- SCRIPTS -->
-    <script src="http://localhost:35729/livereload.js"></script>
-    <!--// SCRIPTS -->
+    <!-- Inicialização dos ícones, menu móvel, animações e validação do formulário -->
   </body>
 </html>
